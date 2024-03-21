@@ -26,9 +26,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         
         if txtFieldPassword.text!.isValidPassword() && txtFieldPhoneNumber.text!.isPhoneNumber() {
-            buttonLogin.isEnabled = false
-        } else {
             buttonLogin.isEnabled = true
+        } else {
+            buttonLogin.isEnabled = false
         }
     }
     
@@ -64,22 +64,19 @@ extension String{
         guard self.contains(where: { char in
             char.isNumber
         }) else {
+            print("no digit")
             return false
         }
         
-        // check if contains uppercase leter
+        // check if contains uppercase letter
         guard self.contains(where: { char in
             char.isUppercase
         }) else {
+            print("no uppercase")
             return false
         }
         
-        // check if contains uppercase leter
-        guard self.contains(where: { char in
-            char.isSymbol
-        }) else {
-            return false
-        }
+        // Similarly you can add more check below
         
         return true
     }
