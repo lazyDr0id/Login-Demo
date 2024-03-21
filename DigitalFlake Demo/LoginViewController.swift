@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController, UITextFieldDelegate {
+class LoginViewController: UIViewController {
 
     @IBOutlet weak var txtFieldPhoneNumber: UITextField!
     @IBOutlet weak var txtFieldPassword: UITextField!
@@ -94,5 +94,12 @@ extension String{
 extension UITextField {
     func clear() {
         self.text = ""
+    }
+}
+
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }

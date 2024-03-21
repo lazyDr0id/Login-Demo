@@ -16,42 +16,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fxC-7L-KUl">
-                                <rect key="frame" x="174" y="522" width="67" height="67"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Yzf-pC-DWG">
+                                <rect key="frame" x="20" y="431" width="374" height="88"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HJB-EN-JSf">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="phonePad" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="tel"/>
+                                        <connections>
+                                            <action selector="textChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="jo0-Pn-BKk"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="LaN-eY-oG3"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CJy-4g-b3j">
+                                        <rect key="frame" x="0.0" y="54" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" textContentType="password"/>
+                                        <connections>
+                                            <action selector="textChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="CnJ-gS-oNS"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="bS9-Ej-XRq"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BM2-72-fUn">
+                                <rect key="frame" x="174" y="559" width="66.5" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="LOGIN"/>
+                                <buttonConfiguration key="configuration" style="filled" title="LOGIN"/>
                                 <connections>
-                                    <segue destination="J0N-Jt-adw" kind="show" id="IxT-nc-fJz"/>
+                                    <segue destination="J0N-Jt-adw" kind="show" id="Am3-sX-wXt"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HJB-EN-JSf">
-                                <rect key="frame" x="59" y="342" width="291" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="phonePad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="tel"/>
-                                <connections>
-                                    <action selector="textChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="jo0-Pn-BKk"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="LaN-eY-oG3"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CJy-4g-b3j">
-                                <rect key="frame" x="54" y="438" width="291" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" textContentType="password"/>
-                                <connections>
-                                    <action selector="textChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="CnJ-gS-oNS"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="bS9-Ej-XRq"/>
-                                </connections>
-                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Yzf-pC-DWG" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="4P3-Nr-Yne"/>
+                            <constraint firstItem="Yzf-pC-DWG" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="IIT-cN-nHO"/>
+                            <constraint firstItem="BM2-72-fUn" firstAttribute="centerX" secondItem="Yzf-pC-DWG" secondAttribute="centerX" id="Jqi-DX-LBG"/>
+                            <constraint firstItem="Yzf-pC-DWG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Mbs-Jb-nB7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Yzf-pC-DWG" secondAttribute="trailing" constant="20" id="h1d-06-3hP"/>
+                            <constraint firstItem="BM2-72-fUn" firstAttribute="top" secondItem="Yzf-pC-DWG" secondAttribute="bottom" constant="40" id="s1g-dA-nAA"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="FUx-Qn-zEM"/>
                     <connections>
-                        <outlet property="buttonLogin" destination="fxC-7L-KUl" id="eeH-LV-yln"/>
+                        <outlet property="buttonLogin" destination="BM2-72-fUn" id="Pf3-Is-kEM"/>
                         <outlet property="txtFieldPassword" destination="CJy-4g-b3j" id="2n5-gG-vbm"/>
                         <outlet property="txtFieldPhoneNumber" destination="HJB-EN-JSf" id="KDe-9A-ANT"/>
                     </connections>
