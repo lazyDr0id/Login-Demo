@@ -17,6 +17,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        txtFieldPhoneNumber.clear()
+        txtFieldPassword.clear()
+        buttonLogin.isEnabled = false
+    }
+    
     
 
     @IBAction func textChanged(_ sender: UITextField) {
@@ -79,5 +87,12 @@ extension String{
         // Similarly you can add more check below
         
         return true
+    }
+}
+
+
+extension UITextField {
+    func clear() {
+        self.text = ""
     }
 }
