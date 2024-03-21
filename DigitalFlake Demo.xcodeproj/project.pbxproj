@@ -15,6 +15,10 @@
 		F013F4E92BAC661F00CB3F08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F013F4E72BAC661F00CB3F08 /* LaunchScreen.storyboard */; };
 		F094FDCF2BAC7C4A00B8B38D /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F094FDCE2BAC7C4A00B8B38D /* TableViewCell.swift */; };
 		F094FDD12BAC7D4B00B8B38D /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F094FDD02BAC7D4B00B8B38D /* ListViewController.swift */; };
+		F094FDD62BAC8ABB00B8B38D /* login2.png in Resources */ = {isa = PBXBuildFile; fileRef = F094FDD22BAC8AB900B8B38D /* login2.png */; };
+		F094FDD72BAC8ABB00B8B38D /* list.png in Resources */ = {isa = PBXBuildFile; fileRef = F094FDD32BAC8ABA00B8B38D /* list.png */; };
+		F094FDD82BAC8ABB00B8B38D /* alert.png in Resources */ = {isa = PBXBuildFile; fileRef = F094FDD42BAC8ABA00B8B38D /* alert.png */; };
+		F094FDD92BAC8ABB00B8B38D /* login1.png in Resources */ = {isa = PBXBuildFile; fileRef = F094FDD52BAC8ABB00B8B38D /* login1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		F013F4EA2BAC661F00CB3F08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F094FDCE2BAC7C4A00B8B38D /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		F094FDD02BAC7D4B00B8B38D /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		F094FDD22BAC8AB900B8B38D /* login2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login2.png; sourceTree = "<group>"; };
+		F094FDD32BAC8ABA00B8B38D /* list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list.png; sourceTree = "<group>"; };
+		F094FDD42BAC8ABA00B8B38D /* alert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alert.png; sourceTree = "<group>"; };
+		F094FDD52BAC8ABB00B8B38D /* login1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,7 @@
 		F013F4DB2BAC660100CB3F08 /* DigitalFlake Demo */ = {
 			isa = PBXGroup;
 			children = (
+				F094FDDB2BAC8AFD00B8B38D /* screenshots */,
 				F013F4DC2BAC660100CB3F08 /* AppDelegate.swift */,
 				F013F4DE2BAC660100CB3F08 /* SceneDelegate.swift */,
 				F013F4E02BAC660200CB3F08 /* LoginViewController.swift */,
@@ -71,6 +80,17 @@
 				F013F4EA2BAC661F00CB3F08 /* Info.plist */,
 			);
 			path = "DigitalFlake Demo";
+			sourceTree = "<group>";
+		};
+		F094FDDB2BAC8AFD00B8B38D /* screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				F094FDD42BAC8ABA00B8B38D /* alert.png */,
+				F094FDD32BAC8ABA00B8B38D /* list.png */,
+				F094FDD52BAC8ABB00B8B38D /* login1.png */,
+				F094FDD22BAC8AB900B8B38D /* login2.png */,
+			);
+			path = screenshots;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,8 +151,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F094FDD62BAC8ABB00B8B38D /* login2.png in Resources */,
+				F094FDD72BAC8ABB00B8B38D /* list.png in Resources */,
+				F094FDD82BAC8ABB00B8B38D /* alert.png in Resources */,
 				F013F4E92BAC661F00CB3F08 /* LaunchScreen.storyboard in Resources */,
 				F013F4E62BAC661F00CB3F08 /* Assets.xcassets in Resources */,
+				F094FDD92BAC8ABB00B8B38D /* login1.png in Resources */,
 				F013F4E42BAC660200CB3F08 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
